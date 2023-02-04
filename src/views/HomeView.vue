@@ -5,7 +5,7 @@
 
 <script>
 import {ref} from "vue";
-import {get_point_across, get_point_curve, get_point_towers} from "@/api/point";
+import {get_min_max_xy, get_point_across, get_point_curve, get_point_towers} from "@/api/point";
 
 export default {
   name: "HomeView",
@@ -18,6 +18,9 @@ export default {
       console.log(res)
     })
     get_point_curve().then(res => {
+      console.log(res)
+    })
+    get_min_max_xy().then(res => {
       console.log(res)
     })
     return {lj_canvas}
